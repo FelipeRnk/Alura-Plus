@@ -1,0 +1,190 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --branco-principal-paragrafo: #F9F9F9;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --font-principal: 'Inter';
+    --botao-azul-efeito: #1356a7;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--font-principal);
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.principal {
+    /* (background-image: url("./img/Background.png");) é ultilizado para inserir uma imagem de estilo que não precisa passar informações ao usuário. */
+    background-image: url("./img/Background.png");
+    /* (background-repeat: no-repeat;) é ultilizado para quando o background repetir espelhar ou refletir. */
+    background-repeat: no-repeat;
+    /* (background-size: contain;) é ultilizado para mudar o tamanho do background o uso do contain faz com que ele preencha todo o container toda área colocada / toda a section. */
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    /* o (display: grid;) nos permite criar layouts de forma mais organizada e flexível. Com o Grid, podemos dividir a área de uma página em linhas e colunas, criando assim uma grade na qual podemos posicionar os elementos do nosso layout.*/
+    display: grid;
+    /*o (grid-template-columns) organiza o grid em colunas fazendo com que a separação não seja em linha que é dada por padrão, o valor dela é o tamanho que cada elemento vai oculpar no caso uma coluna de 50% e outra com 50% também / é nescessário escrever grid-template(para informar que forma se organizar)-columns|row|...*/
+    grid-template-columns: 50% 50%;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    text-decoration: none;
+    border-radius: 8px;
+    /* a unidade de medida em está em relação ao tamanho da fonte se aumenta o tamanho da fonte o padding irá aumentar respectivamente*/
+    padding: 1em;
+    color: var(--branco-principal);
+    text-align: center;
+    /* (display:block) é usada para fazer com que um elemento ocupe toda a largura disponível na página, ou seja, ele começa em uma nova linha e se estende até o final da linha. Isso significa que qualquer elemento que venha depois dele será exibido em uma nova linha.*/
+    display: block;
+    margin-bottom: 1em;
+}
+
+.botao_secundario {
+    /* (transparent) serve para deixar o background-clor trasnparente  */
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 0.75em;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 1.75em;
+}
+
+.container__imagem {
+    /* quando se coloca quatro valores para uma margin ou um padding ou uma borda ele segue o sentido horário assim sendo a sequência: cima, direit, baixo. esquerda.  */
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+    /* quandi se é colocado 2 resultados na margin, padding ou no border o primeiro valor serve para cima e baixo e o segundo valor serve para esquerda e direita. */
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 3em;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    font-weight: 400;
+    font-size: 1em;
+    color: var(--branco-principal-paragrafo)
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    /* (list-style-type) serve para tirar as bolinhas que antecede os itens da lista como o text-decoration tira a linha do link em escrita. */
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.lista__item {
+    font-family: var(--font-principal);
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--branco-principal);
+
+}
+
+.dispositivos__titulo {
+    font-size: 3em;
+    font-family: var(--font-principal);
+    color: var(--branco-principal);
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8em 8em 0 8em;
+    font-family: var(--font-principal);
+    font-weight: 400;
+}
+
+.rodape__logo {
+    width: 7%;
+    margin-bottom: 3em;
+}
+
+.rodape__lista {
+    display: flex;
+    gap: 1em;
+    list-style-type: none;
+    margin-bottom: 2em;
+}
+
+.rodape__texto {
+    text-align: center;
+    font-size: 0.875em;
+    color: var(--cinza-secundario);
+    margin-bottom: 2em;
+}
+
+/* a class aqui é chamada (.lista__link) porem com a adicão de a que seria o elemento que é querido modificar então a sintaxe é: (.lista__link a) */
+.lista__link a {
+    text-decoration: none;
+    color: var(--branco-principal);
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: var(--botao-azul-efeito);
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+}
+
+.botao_secundario:hover {
+    background-color: transparent;
+    border-color: var(--botao-azul-efeito);
+}
